@@ -291,7 +291,7 @@ footer a {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        z-index: 0;
+        z-index: 1;
         transform: none;
         padding: 80px;
     }
