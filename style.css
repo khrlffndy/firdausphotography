@@ -27,7 +27,7 @@ nav {
     align-items: center;
     padding: 0 20px;
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
-    z-index: 2;
+    z-index: 6;
 }
 nav .title {
     font-size: 22px;
