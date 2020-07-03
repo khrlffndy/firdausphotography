@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+
+/** NAVBAR **/
+nav {
+    width: 100%;
+    max-width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+nav .title {
+    font-size: 22px;
+    text-transform: uppercase;
+}
+nav .title span.titleBold {
+    font-weight: 800;
+}
+
+nav .menuBtn label span.icon i, nav .menuBtn .menuExpanded label span.icon i {
+    font-size: 22px;
+    cursor: pointer;
+}
+nav .menuBtn input[type="checkbox"] {
+    display: none;
+}
+nav .menuBtn .menuExpanded {
+    width: 80vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    transition: opacity .2s ease-in;
+    opacity: 0;
+    z-index: 5;
+    pointer-events: none;
+}
+nav .menuBtn .menuExpanded label {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+nav .menuBtn .menuExpanded ul {
+    width: 100%;
+    height: 100%;
+    margin-top: 80px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav .menuBtn .menuExpanded ul li {
+    width: 80%;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    padding: 12px 20px;
+}
+nav .menuBtn .menuExpanded ul li:hover {
+    background-color: #e8e8e8;
+}
+nav .menuBtn .menuExpanded ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+nav .menuBtn input[type="checkbox"]:checked + .menuExpanded {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/** HERO AREA **/
+main {
+    width: 100%;
+    max-width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+main .heroContainer {
+    width: inherit;
+    height: inherit;
+    background-image: url('img/image5.JPG');
+    background-position: center;
+    background-size: cover;
+    filter: grayscale();
+}
+main .textContainer {
+    width: 90vw;
+    padding: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255,255,255,0.8);
+    z-index: 4;
+    border-radius: 6px;
+}
+main .textContainer h1 {
+    font-size: 16px;
+}
+main .textContainer h2 {
+    font-size: 36px;
+    font-family: 'Playfair Display', serif;
+    margin-left: -3px;
+}
+main .textContainer h3 {
+    font-size: 16px;
+}
+
+/** ABOUT SECTION/AREA **/
+section.about {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+section.about img {
+    width: 280px;
+    height: auto;
+    filter: grayscale();
+}
+section.about .info {
+    margin-top: 12px;
+    text-align: center;
+    padding: 0 20px;
+}
+section.about .info h4 {
+    font-size: 22px;
+    font-weight: 800;
+    font-family: 'Playfair Display', serif;
+}
+
+/** WORKS/GALLERY SECTION/AREA **/
+section.works {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section.works h4 {
+    font-size: 22px;
+    font-weight: 800;
+    font-family: 'Playfair Display', serif;
+}
+section.works .swiper-wrapper {
+    width: 100%;
+    height: 100%;
+}
+section.works .swiper-wrapper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.works .swiper-wrapper .swiper-slide img {
+    width: 80vw;
+    height: auto;
+    filter: grayscale();
+}
+section.works .swiper-button-prev, section.works .swiper-button-next {
+    outline: none;
+    color: black;
+}
+.swiper-pagination-bullet-active{
+    background: black;
+}
+
+/** CONTACT SECTION/AREA **/
+section.contact {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section.contact h4 {
+    font-size: 22px;
+    font-weight: 800;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 30px;
+}
+section.contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+section.contact form input[type="text"], section.contact form textarea {
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    padding: 8px 12px;
+}
+section.contact form button {
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: black;
+}
+section.contact form button:hover, section.contact form button:active {
+    color: white;
+    background-color: gray;
+    border: 1px solid gray;
+}
+
+/** FOOTER SECTION/AREA **/
+footer {
+    width: 100%;
+    height: 30vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    text-align: center;
+}
+footer .socialMedia {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+footer .socialMedia a {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    font-size: 30px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+footer a {
+    color: white;
+}
+
+@media all and (min-width: 920px) {
+    nav .menuBtn .menuExpanded {
+        width: 30vw;
+    }
+
+    main {
+        flex-direction: row-reverse;
+        position: unset;
+    }
+    main .heroContainer {
+        width: 50vw;
+    }
+    main .textContainer {
+        width: 50vw;
+        position: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        z-index: 0;
+        transform: none;
+        padding: 80px;
+    }
+
+    section.about {
+        flex-direction: row;
+        position: unset;
+    }
+    section.about .info {
+        width: 36vw;
+        margin-top: 0;
+        text-align: start;
+        padding-inline-start: 90px;
+    }
+
+    section.works .swiper-wrapper .swiper-slide img {
+        width: auto;
+        height: 70vh;
+        filter: grayscale();
+    }
+}
+
+@media all and (min-width: 1240px) {
+    section.about img {
+        width: 400px;
+        height: auto;
+        filter: grayscale();
+    }
+}
